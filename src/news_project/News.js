@@ -1,8 +1,8 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
-import { SafeAreaView, View, Text, ScrollView, Image, FlatList, Dimensions } from 'react-native';
+import { SafeAreaView,  ScrollView, Image, FlatList, Dimensions } from 'react-native';
 
-import { NewsCard } from './components'
+import { NewsCard } from './components2';
 
 const news_data = [
     {
@@ -99,15 +99,15 @@ const News = () => {
                                     width: Dimensions.get('window').width * 0.90,
                                     height: Dimensions.get('window').height / 4,
                                     margin: 5,
-                                    borderRadius: 10
+                                    borderRadius: 10,
                                 }}
                             />
-                        )
+                        );
                     })
                 }
             </ScrollView>
-        )
-    }
+        );
+    };
 
     return (
         <SafeAreaView style={{ flex: 1 }}>
@@ -120,7 +120,7 @@ const News = () => {
             />
 
         </SafeAreaView>
-    )
+    );
 }
-
-export default News
+;
+export default News;
