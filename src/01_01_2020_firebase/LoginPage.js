@@ -1,10 +1,13 @@
 import React from 'react';
 import { SafeAreaView, View, Text, TextInput, Button } from 'react-native';
 import auth from '@react-native-firebase/auth';
+import Modal from 'react-native-modal';
+
 
 const LoginPage = (props) => {
     const [email, setEmail] = React.useState("");
     const [password, setPassword] = React.useState("");
+    
 
     const signIn = () => {
         auth()
@@ -65,6 +68,7 @@ const LoginPage = (props) => {
                     onPress={signIn}
                 />
                 </View>
+                
 
             </View>
         </SafeAreaView>

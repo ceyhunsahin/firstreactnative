@@ -1,9 +1,9 @@
 /**
  * @format
  */
-
+import 'react-native-gesture-handler'
 import {AppRegistry} from 'react-native';
-import LoginPage from './src/01_01_2020_firebase/LoginPage';
+import Router from './src/portfolio1/Router';
 import {name as appName} from './app.json';
 
-AppRegistry.registerComponent(appName, () => LoginPage );
+AppRegistry.registerComponent(appName, () => Router );
