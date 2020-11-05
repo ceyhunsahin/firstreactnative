@@ -6,7 +6,7 @@ const SavedJobs = (props) =>{
     return(
         <SafeAreaView>
             <View>
-                <Text>Portfolio</Text>
+                <Text>SavedJobs</Text>
             </View>
         </SafeAreaView>
     )

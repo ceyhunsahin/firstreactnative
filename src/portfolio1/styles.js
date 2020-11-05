@@ -14,7 +14,7 @@ export const topicItem = StyleSheet.create({
 
 export const intrdoduction = StyleSheet.create({
     banner : {
-        height : Dimensions.get('height').height/3,
+        height : Dimensions.get('height').height / 3,
         justifyContent : 'center',
         alignItems : 'center'
 
