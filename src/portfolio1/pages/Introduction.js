@@ -1,7 +1,7 @@
 import React from 'react';
 import {SafeAreaView, View, Text,ScrollView} from 'react-native';
 import {TopicItem} from '../components';
-import { introduction} from '../styles'
+import {introduction} from '../styles'
 
 const topics = [
   {
@@ -56,7 +56,7 @@ const Introduction = (props) => {
   return (
     <SafeAreaView style = {{flex:1}}>
       <View style = {{flex:1}}>
-          <View style = {Introduction.banner}>
+          <View style = {introduction.banner}>
                 <Text>Choissiez la langue programme</Text>
             </View>
         <ScrollView

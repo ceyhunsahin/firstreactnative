@@ -12,9 +12,9 @@ export const topicItem = StyleSheet.create({
   }
 })
 
-export const intrdoduction = StyleSheet.create({
+export const introduction = StyleSheet.create({
     banner : {
-        height : Dimensions.get('height').height / 3,
+        height : Dimensions.get('window').height / 3,
         justifyContent : 'center',
         alignItems : 'center'
 
