@@ -53,18 +53,25 @@ const topics = [
 ]
 
 const Introduction = (props) => {
+
+  function selectLanguage(lang){
+    props.navigation.navigate('Jobs', {selectedLanguage : lang})
+
+
+  }
+
   return (
-    <SafeAreaView style = {{flex:1}}>
+    <SafeAreaView style = {{flex:1, backgroundColor : '#efefef'}}>
       <View style = {{flex:1}}>
           <View style = {introduction.banner}>
-                <Text>Choissiez la langue programme</Text>
-            </View>
+                <Text style = {introduction.bannertext}>Choissiez la langue programme</Text>
+          </View>
         <ScrollView
             horizontal
             contentContainerStyle = {{alignItems : 'center'}}>
             {
                 topics.map((t) => {
-                    return <TopicItem key = {t.id} item ={t} />;
+                    return <TopicItem key = {t.id} item ={t} onSelect = {()=> selectLanguage(t.name)}/>;
             })}
 
         </ScrollView>

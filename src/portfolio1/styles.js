@@ -18,5 +18,8 @@ export const introduction = StyleSheet.create({
         justifyContent : 'center',
         alignItems : 'center'
 
+    }, bannertext : {
+        fontSize : 25,
+        fontWeight : 'bold',
     }
 })
