@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {SafeAreaView, View, Text,FlatList,Button,TouchableOpacity} from 'react-native';
 import Axios from 'axios';
+import { WebView } from 'react-native-webview';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {JobItem} from '../components';
 import Modal from "react-native-modal";
@@ -71,12 +72,16 @@ const Jobs = (props) =>{
 
                 <Modal isVisible = {modalFlag} onBackdropPress = {() => SetModalFlag(false)}>
                     <View style = {jobs.modalBackground}>
-                        <Text style = {jobs.jobTitle}>{selectedJob.title}</Text>
-                        <Text>{selectedJob.location} / {selectedJob.title} </Text>
-                        <Text numberOfLines = {5} >{selectedJob.description} </Text>
-                        
-                        <Text>{selectedJob.company}</Text>
+                        <View style = {jobs.modalBackground}>
+                            <Text style = {jobs.jobTitle}>{selectedJob.title}</Text>
+                            <Text>{selectedJob.location} / {selectedJob.title} </Text>
+                            <Text>{selectedJob.company}</Text>
+                        </View>
 
+                        <View>
+                            <WebView source = {{html : selectedJob.description}} />
+                        </View>
+                        
                         <Button
                             title = 'Kaydet'
                             onPress = {onJobSave}
