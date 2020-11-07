@@ -10,9 +10,11 @@ const Stack = createStackNavigator();
 function Router() {
   return (
     <NavigationContainer>
-      {
-        // ...
-      }
+      <Stack.Navigator initialRouteName="Timeline" screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="Login" component={Login}/>
+        <Stack.Screen name="Sign" component={Sign} />
+        <Stack.Screen name="Timeline" component={Timeline} />
+      </Stack.Navigator>
     </NavigationContainer>
   );
 }
