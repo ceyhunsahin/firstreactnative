@@ -16,7 +16,7 @@ const Main = (props) => {
   const mapRef = useRef(null);
 
   const fetchCities = async () => {
-    const {data} = await Axios.get(
+    const {data} = await Axios.get( //burda response da diyebilirdik
       'https://opentable.herokuapp.com/api/cities',
     );
     setCityList(data.cities);
